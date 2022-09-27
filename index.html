@@ -29,11 +29,13 @@
         <div class="search-container">
             <div class="search-element">
                 <h3>Search Movies:</h3>
-                <input type="text" class="form-control" placeholder="Search movies title.." id="movie-search-box">
+                <input type="text" class="form-control" placeholder="Search movies title.." id="movie-search-box"
+                onkeyup="findMovies()"
+                >
                 <!-- searched list here -->
-                <div class="search-list">
+                <div class="search-list" id="search-list">
                     <!-- search-list-item -->
-                    <div class="search-list-item">
+                    <!-- <div class="search-list-item">
                         <div class="search-item-thumbnail">
                             <img src="./Assets/images/image.jpg" alt="" srcset="">
                         </div>
@@ -41,8 +43,8 @@
                             <h3>God of War vol-3</h3>
                             <p>2019</p>
                         </div>
-                    </div>
-                    <div class="line"></div>
+                    </div> -->
+                    <!-- <div class="line"></div> -->
                 </div>
             </div>
         </div>
