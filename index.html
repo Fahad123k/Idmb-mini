@@ -21,16 +21,20 @@
         <div class="logo">
             <div class="container">
                 <p>Movies.<span>Hub</span></p>
+                
             </div>
+            
         </div>
         <!-- end of logo -->
 
         <!-- search container -->
         <div class="search-container">
             <div class="search-element">
-                <h3>Search Movies:</h3>
+                <h3>Search Movies:  <span></span></h3>
                 <input type="text" class="form-control" placeholder="Search movies title.." id="movie-search-box"
                     onkeyup="findMovies()" onclick="findMovies()">
+                <div class="favorite" >Favourite: <i class="favouriteIcon fas fa-list-alt" onclick="favoriteList()"></i></div> 
+
                 <!-- searched list here -->
                 <div class="search-list" id="search-list">
                     <!-- search-list-item -->

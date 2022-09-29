@@ -65,14 +65,14 @@ function displayMovieList(movies){
 
 
 
-function loadMovieDetails(){
-    const searchListMovies=searchList.querySelectorAll('search-list-item');
-    searchListMovies.forEach(movie=>{
-        movie.addEventListener('click',async()=>{
-            console.log(movie.dataset.id);
-        })
-    })
-}
+// function loadMovieDetails(){
+//     const searchListMovies=searchList.querySelectorAll('search-list-item');
+//     searchListMovies.forEach(movie=>{
+//         movie.addEventListener('click',async()=>{
+//             console.log(movie.dataset.id);
+//         })
+//     })
+// }
 
 function loadMovieDetails(){
     const searchListMovies = searchList.querySelectorAll('.search-list-item');
@@ -81,7 +81,9 @@ function loadMovieDetails(){
             // console.log(movie.dataset.id);
             searchList.classList.add('hide-search-list');
             movieSearchBox.value = "";
-            const result = await fetch(`http://omdbapi.com/?i=${movie.dataset.id}&apikey=4a7dc175`);
+            // const result = await fetch(`http://omdbapi.com/?i=${movie.dataset.id}&apikey=4a7dc175`);
+            const result = await fetch(`http://www.omdbapi.com/?i=${movie.dataset.id}&apikey=4a7dc175`);
+            // `https://omdbapi.com/?s=${searchTerm}&page=1&apikey=4a7dc175`;
             const movieDetails = await result.json();
             // console.log(movieDetails);
             displayMovieDetails(movieDetails);
@@ -111,6 +113,11 @@ function displayMovieDetails(details){
     `;
 }
 
+// favoriteList
+
+function favoriteList(){
+    alert("favourite lists");
+}
 
 window.addEventListener('click', (event) => {
     if(event.target.className != "form-control"){
